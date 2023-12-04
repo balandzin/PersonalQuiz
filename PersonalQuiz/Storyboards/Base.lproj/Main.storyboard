@@ -302,21 +302,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Jse-5L-sv4">
-                                <rect key="frame" x="77.5" y="236" width="165.5" height="96.5"/>
+                                <rect key="frame" x="16" y="236" width="288" height="96.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы – 🐙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bx0-ua-oZR">
-                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="60"/>
+                                        <rect key="frame" x="61.5" y="0.0" width="165.5" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы осьминог" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEz-3E-gQr">
-                                        <rect key="frame" x="30.5" y="76" width="104" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы осьминог" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEz-3E-gQr">
+                                        <rect key="frame" x="16" y="76" width="256" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="SEz-3E-gQr" firstAttribute="leading" secondItem="Jse-5L-sv4" secondAttribute="leading" constant="16" id="54V-TK-buI"/>
+                                    <constraint firstAttribute="trailing" secondItem="SEz-3E-gQr" secondAttribute="trailing" constant="16" id="9TF-2g-nUb"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lFv-P0-Mxs"/>
@@ -324,6 +328,8 @@
                         <constraints>
                             <constraint firstItem="Jse-5L-sv4" firstAttribute="centerY" secondItem="XnY-FU-3Wj" secondAttribute="centerY" id="FyM-Kt-e9K"/>
                             <constraint firstItem="Jse-5L-sv4" firstAttribute="centerX" secondItem="XnY-FU-3Wj" secondAttribute="centerX" id="Qfs-Db-dEY"/>
+                            <constraint firstItem="Jse-5L-sv4" firstAttribute="leading" secondItem="lFv-P0-Mxs" secondAttribute="leading" constant="16" id="oC1-X4-4jT"/>
+                            <constraint firstItem="lFv-P0-Mxs" firstAttribute="trailing" secondItem="Jse-5L-sv4" secondAttribute="trailing" constant="16" id="z8v-tS-28V"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результат" id="3hA-p6-Lu7">
@@ -333,6 +339,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="SEz-3E-gQr" id="hTF-x4-ED7"/>
+                        <outlet property="resultLabel" destination="bx0-ua-oZR" id="D0o-7C-Qwb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFO-CL-2q4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
